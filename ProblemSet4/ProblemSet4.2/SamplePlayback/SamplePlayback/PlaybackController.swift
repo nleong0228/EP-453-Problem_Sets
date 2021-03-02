@@ -37,8 +37,12 @@ class PlaybackController: ObservableObject {
         loop = AudioPlayer(file: loopFile!)
         loop?.isLooping = true
         
-        /*var variSpeed = VariSpeed(loop!)
-        variSpeed.rate = 1.0*/
+        /*
+        var speedRange: ClosedRange<AUValue> = 0.1...1
+        @Published var speed: AUValue = 1
+         
+        var variSpeed = VariSpeed(loop!)
+        VariSpeed.rate = speed */
  
         mixer = Mixer([guitar!, trumpet!, loop!, shaker!, bass!])
         engine.output = mixer
@@ -152,8 +156,8 @@ struct PlaybackControlView: View {
                     }
                    /* HStack {
                         Text("Playback Speed")
-                        ValueSlider(value: variSpeed.rate, in: controller.rateRange).valueSliderStyle(thumbSize: CGSize(width: 15, height: 15), thumbInteractiveSize: CGSize(width: 25, height: 25))).padding().frame(height: 10)*/
-                    }
+                        ValueSlider(value: variSpeed.rate, in: controller.rateRange).valueSliderStyle(thumbSize: CGSize(width: 15, height: 15), thumbInteractiveSize: CGSize(width: 25, height: 25))).padding().frame(height: 10)
+                    }*/
                 }
             }
         }
