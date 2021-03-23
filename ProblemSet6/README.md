@@ -20,4 +20,4 @@ This project requires the use of AudioKit, SwiftUI, Sliders, and AVFoundation
 
 ## Acknowledgement
 
-Used the Audiokit [reference] (https://audiokit.io/docs/) 
+Used the Audiokit [reference] (https://audiokit.io/docs/) __
