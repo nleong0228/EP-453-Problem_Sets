@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AF650672612C815009E6122 /* MultiTouchChorusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF650662612C815009E6122 /* MultiTouchChorusApp.swift */; };
+		1AF650692612C815009E6122 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF650682612C815009E6122 /* ContentView.swift */; };
+		1AF6506B2612C816009E6122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF6506A2612C816009E6122 /* Assets.xcassets */; };
+		1AF6506E2612C816009E6122 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF6506D2612C816009E6122 /* Preview Assets.xcassets */; };
+		1AF650772612C840009E6122 /* ChorusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF650762612C840009E6122 /* ChorusView.swift */; };
+		1AF6507A2612C86C009E6122 /* ChorusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF650792612C86C009E6122 /* ChorusController.swift */; };
+		1AF6507D2612C88E009E6122 /* MultiTouchSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6507C2612C88E009E6122 /* MultiTouchSynth.swift */; };
+		1AF650812612C8EC009E6122 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1AF650802612C8EC009E6122 /* AudioKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AF650632612C815009E6122 /* MultiTouchChorus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTouchChorus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AF650662612C815009E6122 /* MultiTouchChorusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTouchChorusApp.swift; sourceTree = "<group>"; };
+		1AF650682612C815009E6122 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1AF6506A2612C816009E6122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AF6506D2612C816009E6122 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1AF6506F2612C816009E6122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AF650762612C840009E6122 /* ChorusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChorusView.swift; sourceTree = "<group>"; };
+		1AF650792612C86C009E6122 /* ChorusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChorusController.swift; sourceTree = "<group>"; };
+		1AF6507C2612C88E009E6122 /* MultiTouchSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTouchSynth.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AF650602612C815009E6122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF650812612C8EC009E6122 /* AudioKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AF6505A2612C815009E6122 = {
+			isa = PBXGroup;
+			children = (
+				1AF650652612C815009E6122 /* MultiTouchChorus */,
+				1AF650642612C815009E6122 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AF650642612C815009E6122 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AF650632612C815009E6122 /* MultiTouchChorus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AF650652612C815009E6122 /* MultiTouchChorus */ = {
+			isa = PBXGroup;
+			children = (
+				1AF650662612C815009E6122 /* MultiTouchChorusApp.swift */,
+				1AF650682612C815009E6122 /* ContentView.swift */,
+				1AF650762612C840009E6122 /* ChorusView.swift */,
+				1AF650792612C86C009E6122 /* ChorusController.swift */,
+				1AF6507C2612C88E009E6122 /* MultiTouchSynth.swift */,
+				1AF6506A2612C816009E6122 /* Assets.xcassets */,
+				1AF6506F2612C816009E6122 /* Info.plist */,
+				1AF6506C2612C816009E6122 /* Preview Content */,
+			);
+			path = MultiTouchChorus;
+			sourceTree = "<group>";
+		};
+		1AF6506C2612C816009E6122 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1AF6506D2612C816009E6122 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AF650622612C815009E6122 /* MultiTouchChorus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AF650722612C816009E6122 /* Build configuration list for PBXNativeTarget "MultiTouchChorus" */;
+			buildPhases = (
+				1AF6505F2612C815009E6122 /* Sources */,
+				1AF650602612C815009E6122 /* Frameworks */,
+				1AF650612612C815009E6122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiTouchChorus;
+			packageProductDependencies = (
+				1AF650802612C8EC009E6122 /* AudioKit */,
+			);
+			productName = MultiTouchChorus;
+			productReference = 1AF650632612C815009E6122 /* MultiTouchChorus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AF6505B2612C815009E6122 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					1AF650622612C815009E6122 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 1AF6505E2612C815009E6122 /* Build configuration list for PBXProject "MultiTouchChorus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AF6505A2612C815009E6122;
+			packageReferences = (
+				1AF6507F2612C8EC009E6122 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
+			productRefGroup = 1AF650642612C815009E6122 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AF650622612C815009E6122 /* MultiTouchChorus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AF650612612C815009E6122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF6506E2612C816009E6122 /* Preview Assets.xcassets in Resources */,
+				1AF6506B2612C816009E6122 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AF6505F2612C815009E6122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF650772612C840009E6122 /* ChorusView.swift in Sources */,
+				1AF6507A2612C86C009E6122 /* ChorusController.swift in Sources */,
+				1AF650692612C815009E6122 /* ContentView.swift in Sources */,
+				1AF6507D2612C88E009E6122 /* MultiTouchSynth.swift in Sources */,
+				1AF650672612C815009E6122 /* MultiTouchChorusApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1AF650702612C816009E6122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1AF650712612C816009E6122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AF650732612C816009E6122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MultiTouchChorus/Preview Content\"";
+				DEVELOPMENT_TEAM = Y8F5RA8F8N;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MultiTouchChorus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.berklee.nleong2.MultiTouchChorus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AF650742612C816009E6122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MultiTouchChorus/Preview Content\"";
+				DEVELOPMENT_TEAM = Y8F5RA8F8N;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MultiTouchChorus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.berklee.nleong2.MultiTouchChorus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AF6505E2612C815009E6122 /* Build configuration list for PBXProject "MultiTouchChorus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AF650702612C816009E6122 /* Debug */,
+				1AF650712612C816009E6122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AF650722612C816009E6122 /* Build configuration list for PBXNativeTarget "MultiTouchChorus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AF650732612C816009E6122 /* Debug */,
+				1AF650742612C816009E6122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1AF6507F2612C8EC009E6122 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				branch = "v5-main";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1AF650802612C8EC009E6122 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AF6507F2612C8EC009E6122 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1AF6505B2612C815009E6122 /* Project object */;
+}
