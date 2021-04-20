@@ -53,9 +53,9 @@ class WhiteOutSynth {
         let fader5 = reson5!
         let fader6 = reson6!
         let fader7 = reson7!
-        let fader8 = reson8
-        let fader9 = reson9
-        let fader10 = reson10
+        let fader8 = reson8!
+        let fader9 = reson9!
+        let fader10 = reson10!
         
         filter = LowPassFilter(noise, cutoffFrequency: AUValue(Settings.sampleRate * 0.125), resonance: 0)
         reverb = Reverb(filter)
@@ -66,7 +66,7 @@ class WhiteOutSynth {
         let faders = [fader0, fader1, fader2, fader3, fader4, fader5, fader6, fader7, fader8, fader9, fader10]
         
         for fader in faders {
-            mixer = Mixer(Fader(fader!, gain: 0), reverb)
+            mixer = Mixer(Fader(faders[0], gain: 0), reverb)
         }
         
         // Track the spectrum of the filtered noise
