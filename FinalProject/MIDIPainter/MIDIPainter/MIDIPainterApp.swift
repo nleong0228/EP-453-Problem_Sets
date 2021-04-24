@@ -1,14 +1,14 @@
 //
-//  MIDIOutTestApp.swift
-//  MIDIOutTest
+//  MIDIPainterApp.swift
+//  MIDIPainter
 //
-//  Created by Akito van Troyer on 4/20/21.
+//  Created by Noah Leong on 4/23/21.
 //
 
 import SwiftUI
 
 @main
-struct MIDIOutTestApp: App {
+struct MIDIPainterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
