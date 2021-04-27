@@ -6,19 +6,59 @@
 
 import UIKit
 import SpriteKit
+import AudioKit
 
 class SequenceScene: SKScene {
     
+    
+    var circleArray = [SKShapeNode]()
     var pathArray = [CGPoint]()
+    var valueArray = [Int]()
     let circleRadius:CGFloat = 15
     var pause:Bool = false
-    var count = 1
+    var count = 0
     var CC = 14
     let controller = MIDIController()
     var nodePosition = CGPoint()
+    var timer: Timer?
+    let screenSize = UIScreen.main.bounds
+    
+    func getPos(index: Int) -> (Int){
+        var sumPos = 0
+        for _ in circleArray {
+            let pos = circleArray[index]
+            
+            sumPos = Int(pos.position.x + pos.position.y)
+        }
+        return sumPos
+    }
     
     func touchDown(atPoint pos : CGPoint){
         pathArray.removeAll()
+        let screenSum = Int(screenSize.width + screenSize.height)
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { [self]timer in
+            var i = 0
+            var val = self.getPos(index: i) / screenSum
+            for _ in circleArray {
+                if i == count
+                {
+                    i = 0
+                }
+                else
+                {
+                    i += 1
+                }
+            }
+
+
+                
+            valueArray.append(val)
+            
+            controller.controlChange(cc: MIDIByte((i + CC)), value: MIDIByte(valueArray[i]))
+            
+            print("CC: \(i), value: \(valueArray[i]), count \(count)")
+        }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -44,7 +84,6 @@ class SequenceScene: SKScene {
         
         let line = SKShapeNode()
         line.name = "line" + String(count)
-        count += 1
         
         line.path = path
         line.fillColor = .clear
@@ -71,17 +110,25 @@ class SequenceScene: SKScene {
     func createCircle() -> (SKShapeNode) {
         let circle = SKShapeNode(circleOfRadius: circleRadius)
         circle.name = "circle" + String(count)
+        count += 1
         circle.strokeColor = .white
         circle.glowWidth = 4.0
         circle.fillColor = SKColor.init(red: 0, green: 0, blue: 1, alpha: 1)
         
         self.addChild(circle)
+        circleArray.append(circle)
         
         return circle
     }
     
     func random(min: CGFloat, max: CGFloat) -> CGFloat {
         return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
+    }
+    
+    func scale(num: CGFloat, minNum: CGFloat, maxNum: CGFloat, scaleMin: CGFloat, scaleMax: CGFloat) -> CGFloat {
+        if (num <= minNum) {return scaleMin}
+        if (num >= maxNum) {return scaleMax}
+        return (num-minNum)/(maxNum-minNum) * (scaleMax-scaleMin) + scaleMin
     }
     
     override func update(_ currentTime: TimeInterval) {
