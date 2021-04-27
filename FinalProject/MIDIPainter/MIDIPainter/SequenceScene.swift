@@ -29,7 +29,9 @@ class SequenceScene: SKScene {
             let pos = circleArray[index]
             
             sumPos = Int(pos.position.x + pos.position.y)
+            print("The position is : \(pos.position)")
         }
+
         return sumPos
     }
     
@@ -57,7 +59,7 @@ class SequenceScene: SKScene {
             
             controller.controlChange(cc: MIDIByte((i + CC)), value: MIDIByte(valueArray[i]))
             
-            print("CC: \(i), value: \(valueArray[i]), count \(count)")
+            //print("CC: \(i), value: \(valueArray[i]), count \(count)")
         }
     }
     
