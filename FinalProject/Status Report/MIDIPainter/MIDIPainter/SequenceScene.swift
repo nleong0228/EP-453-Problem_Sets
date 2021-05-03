@@ -10,13 +10,13 @@ import AudioKit
 
 class SequenceScene: SKScene {
     
-    
     var circleArray = [SKShapeNode]()
     var pathArray = [CGPoint]()
     var valueArray = [Int]()
     let circleRadius:CGFloat = 15
     var pause:Bool = false
     var count = 0
+    var curCC = 0
     var CC = 14
     let controller = MIDIController()
     var nodePosition = CGPoint()
@@ -29,7 +29,7 @@ class SequenceScene: SKScene {
             let pos = circleArray[index]
             
             sumPos = Int(pos.position.x + pos.position.y)
-            print("The position is : \(pos.position)")
+            
         }
 
         return sumPos
@@ -37,30 +37,28 @@ class SequenceScene: SKScene {
     
     func touchDown(atPoint pos : CGPoint){
         pathArray.removeAll()
-        let screenSum = Int(screenSize.width + screenSize.height)
+        let screenSum = Float(screenSize.width + screenSize.height)
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { [self]timer in
-            var i = 0
-            var val = self.getPos(index: i) / screenSum
-            for _ in circleArray {
-                if i == count
-                {
-                    i = 0
-                }
-                else
-                {
-                    i += 1
-                }
-            }
-
-
+            
+            count = circleArray.count
+            
+            let val = getPos(index: curCC)
                 
             valueArray.append(val)
             
-            controller.controlChange(cc: MIDIByte((i + CC)), value: MIDIByte(valueArray[i]))
+            let scaledValue = scale(num: Float(val), minNum: 0, maxNum: screenSum, scaleMin: 0, scaleMax: 127)
+
+            curCC += 1
             
-            //print("CC: \(i), value: \(valueArray[i]), count \(count)")
+            if curCC >= count
+            {
+                curCC = 0
+            }
+            controller.controlChange(cc: MIDIByte((curCC + CC)), value: MIDIByte(scaledValue))
         }
+        
+        
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -127,26 +125,18 @@ class SequenceScene: SKScene {
         return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
     }
     
-    func scale(num: CGFloat, minNum: CGFloat, maxNum: CGFloat, scaleMin: CGFloat, scaleMax: CGFloat) -> CGFloat {
+    func scale(num: Float, minNum: Float, maxNum: Float, scaleMin: Float, scaleMax: Float) -> Float {
         if (num <= minNum) {return scaleMin}
         if (num >= maxNum) {return scaleMax}
         return (num-minNum)/(maxNum-minNum) * (scaleMax-scaleMin) + scaleMin
     }
     
+    func remove(remove: SKShapeNode) {
+        remove.removeFromParent()
+    }
+    
     override func update(_ currentTime: TimeInterval) {
-      /*  var pos: CGPoint
-        let circle = createCircle()
-        let name = circle.name
-        
-        pos = circle.position
-        
-        if name != nil && (name?.contains("circle"))! {
-            if count > 1
-            {
-                CC += 1
-            }
-        }
-        */
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

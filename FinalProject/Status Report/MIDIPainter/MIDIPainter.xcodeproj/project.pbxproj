@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A58E99A263F4F7200D92126 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58E999263F4F7200D92126 /* Buttons.swift */; };
 		1AF5C1B42633A8570001B28C /* MIDIPainterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5C1B32633A8570001B28C /* MIDIPainterApp.swift */; };
 		1AF5C1B82633A8580001B28C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF5C1B72633A8580001B28C /* Assets.xcassets */; };
 		1AF5C1BB2633A8580001B28C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF5C1BA2633A8580001B28C /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A58E999263F4F7200D92126 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		1AF5C1B02633A8570001B28C /* MIDIPainter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDIPainter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF5C1B32633A8570001B28C /* MIDIPainterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIPainterApp.swift; sourceTree = "<group>"; };
 		1AF5C1B72633A8580001B28C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				1AF5C1B72633A8580001B28C /* Assets.xcassets */,
 				1AF5C1BC2633A8580001B28C /* Info.plist */,
 				1AF5C1B92633A8580001B28C /* Preview Content */,
+				1A58E999263F4F7200D92126 /* Buttons.swift */,
 			);
 			path = MIDIPainter;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A58E99A263F4F7200D92126 /* Buttons.swift in Sources */,
 				1AF5C1B42633A8570001B28C /* MIDIPainterApp.swift in Sources */,
 				1AF5C1C42633A8620001B28C /* SequenceScene.swift in Sources */,
 				1AF5C1CA2633A86E0001B28C /* MIDIController.swift in Sources */,
