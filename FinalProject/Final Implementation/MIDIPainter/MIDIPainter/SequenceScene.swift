@@ -24,8 +24,6 @@ class SequenceScene: SKScene, ObservableObject {
     let screenSize = UIScreen.main.bounds
     var previous:CGPoint?
 
-
-    
     func touchDown(atPoint pos : CGPoint){
         pathArray.removeAll()
         let screenSum = Float(screenSize.width + screenSize.height)
@@ -69,17 +67,7 @@ class SequenceScene: SKScene, ObservableObject {
         previous = pos
     }
     
-    func getPos(index: Int) -> (Int){
-        var sumPos = 0
-        for _ in circleArray {
-            let pos = circleArray[index]
-            
-            sumPos = Int(pos.position.x + pos.position.y)
-        }
-        
-        return sumPos
-    }
-    
+
     func checkPos(pos: CGPoint) -> Bool {
         var isTouching:Bool = false
         for path in pathArray
@@ -91,6 +79,17 @@ class SequenceScene: SKScene, ObservableObject {
         }
         
         return isTouching
+    }
+    
+    func getPos(index: Int) -> (Int){
+        var sumPos = 0
+        for _ in circleArray {
+            let pos = circleArray[index]
+            
+            sumPos = Int(pos.position.x + pos.position.y)
+        }
+        
+        return sumPos
     }
     
     
@@ -164,8 +163,7 @@ class SequenceScene: SKScene, ObservableObject {
             h.removeFromParent()
             circleArray[curCC - 1].removeFromParent()
         }
-        print(circleArray.count)
-        print("CC is \(curCC)")
+        
         circleArray.remove(at: curCC - 1)
     }
     
